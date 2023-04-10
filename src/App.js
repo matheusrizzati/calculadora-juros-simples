@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import CalculadoraJuros from './pages/calculadoraJuros';
+import CalculadoraCapital from './pages/calculadoraCapital';
+import CalculadoraTaxa from './pages/calculadoraTaxa';
+import CalculadoraPeriodo from './pages/calculadoraPeriodo';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    <header>
+      <Link to='/'>Juros (Etapa1)</Link>
+      <Link to='/capital'> Capital Investido (Etapa 2)</Link>
+      <Link to='/taxa'> Taxa de Juros (Etapa 3)</Link>
+      <Link to='/periodo'> Periodo (Etapa 4)</Link>
+    </header>
+       <Routes>
+        <Route path="/" element={ <CalculadoraJuros /> } />
+        <Route path="/capital" element={<CalculadoraCapital />} />
+        <Route path="/taxa" element={<CalculadoraTaxa />} />
+        <Route path="/periodo" element={<CalculadoraPeriodo />} />
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 

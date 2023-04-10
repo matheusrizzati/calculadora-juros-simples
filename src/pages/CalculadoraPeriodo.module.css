@@ -1,0 +1,73 @@
+.calculadoraPeriodoContainer {
+    background-color: #FFF;
+    padding: 10px 16px 16px 16px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  
+  .calculadoraPeriodoTitle {
+    font-size: 32px;
+    color: #0066cc;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .calculadoraPeriodoForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calculadoraPeriodoFormGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .calculadoraPeriodoFormGroup label {
+    font-size: 20px;
+    color: #0066cc;
+    margin-bottom: 5px;
+  }
+  
+  .calculadoraPeriodoFormControl {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-size: 18px;
+    color: #000000;
+    outline: none;
+  }
+  
+  .calculadoraPeriodoBtnPrimary {
+    background-color: #33cc33;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .calculadoraPeriodoBtnPrimary:hover {
+    background-color: #28a745;
+  }
+  
+  .calculadoraPeriodoBtnPrimary:active {
+    background-color: #1e7e34;
+  }
+  
+  .calculadoraPeriodoBtnPrimary:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .calculadoraPeriodoBtnPrimary:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px #33cc33;
+  }
+  
