@@ -10,7 +10,7 @@ function CalculadoraTaxa() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const taxaCalculada =
-      (juros / ( capitalInicial * periodo)) * 100;
+      ((parseFloat(juros) / parseFloat(capitalInicial)) ** (1 / parseFloat(periodo))) - 1 ;
     setTaxaJuros(taxaCalculada.toFixed(2));
   };
 

@@ -9,14 +9,16 @@ function CalculadoraJuros() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const jurosCalculado =
-      capitalInicial * (taxaJuros / 100) * periodo;
+    console.table(capitalInicial, taxaJuros, periodo)
+    let jurosCalculado =
+      parseFloat(capitalInicial) * ((1 + parseFloat(taxaJuros)) ** parseFloat(periodo));
+      console.log(jurosCalculado)
     setJuros(jurosCalculado.toFixed(2));
   };
 
   return (
     <div className={styles.calculadoraJurosContainer}>
-      <h1 className={styles.calculadoraJurosTitle}>Calculadora de Juros</h1>
+      <h1 className={styles.calculadoraJurosTitle}>Calculadora de Juros compostos</h1>
       <form onSubmit={handleSubmit} className={styles.calculadoraJurosForm}>
         <div className={styles.calculadoraJurosFormGroup}>
           <label htmlFor="capitalInicial">Capital Inicial</label>

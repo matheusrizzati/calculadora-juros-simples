@@ -10,7 +10,7 @@ function CalculadoraCapital() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const capitalCalculado =
-      juros * ( taxaJuros / periodo);
+      parseFloat(juros) / (( 1 + parseFloat(taxaJuros) ) ** parseFloat(periodo));
     setCapitalInicial(capitalCalculado.toFixed(2));
   };
 

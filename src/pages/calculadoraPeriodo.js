@@ -10,7 +10,7 @@ function CalculadoraPeriodo() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const periodoCalculado =
-      (juros / ( capitalInicial * taxaJuros)) * 100;
+      (Math.log(parseFloat(juros) / parseFloat(capitalInicial))) / (Math.log( 1 + parseFloat(taxaJuros)));
     setPeriodo(periodoCalculado.toFixed(0));
   };
 
